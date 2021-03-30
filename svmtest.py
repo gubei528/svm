@@ -6,7 +6,7 @@ import joblib
 
 def svmtest(model_path):
     path = sys.path[1]
-    tbasePath = os.path.join(path, r"D:\Users\lijinheng\Desktop\moshi\SVM-master\data\Mnist-image\Mnist-image\test\\")
+    tbasePath = os.path.join(path, r"测试数据地址\\")
     tcName = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     tst = time.clock()
     allErrCount = 0
@@ -49,7 +49,7 @@ def svmtest(model_path):
 
 if __name__ == '__main__':
     path = sys.path[1]
-    model_path=os.path.join(path,r'D:\Users\lijinheng\Desktop\moshi\SVM-master\data\Mnist-image\Mnist-image\svm.model')
+    model_path=os.path.join(path,r'D模型地址\svm.model')
     svmtest(model_path)
 
 
