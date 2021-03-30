@@ -53,7 +53,7 @@ class MyWindow(QMainWindow, Ui_Dialog):
         self.textEdit.setText(imgName)
 
         path = sys.path[1]
-        model_path = os.path.join(path, r'D:\Users\lijinheng\Desktop\moshi\SVM-master\data\Mnist-image\Mnist-image\svm.model')
+        model_path = os.path.join(path, r'模型地址\svm.model')
         clf = joblib.load(model_path)
         dataMat=svm.img2vector(imgName)
         preResult = clf.predict(dataMat)
