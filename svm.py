@@ -64,7 +64,7 @@ def read_and_convert(imgFileList):
 def read_all_data():
     cName = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     path = sys.path[1]
-    train_data_path = os.path.join(path, r'D:\Users\lijinheng\Desktop\moshi\SVM-master\data\Mnist-image\Mnist-image\train\0')
+    train_data_path = os.path.join(path, r'训练你自己的数据路径\0')
     #print(train_data_path)
     #train_data_path = "Mnist-image\\train\\0"
     print('0')
@@ -72,7 +72,7 @@ def read_all_data():
     dataMat, dataLabel = read_and_convert(flist)
     for c in cName:
         print(c)
-        train_data_path = os.path.join(path,r'D:\Users\lijinheng\Desktop\moshi\SVM-master\data\Mnist-image\Mnist-image\train\\') + c
+        train_data_path = os.path.join(path,r'这里是你自己的路径') + c
         flist_ = get_file_list(train_data_path)
         dataMat_, dataLabel_ = read_and_convert(flist_)
         dataMat = np.concatenate((dataMat, dataMat_), axis=0)
@@ -102,7 +102,7 @@ if __name__ == '__main__':
     st = time.clock()
     dataMat, dataLabel = read_all_data()
     path = sys.path[1]
-    model_path=os.path.join(path,r'D:\Users\lijinheng\Desktop\moshi\SVM-master\data\Mnist-image\Mnist-image\svm.model')
+    model_path=os.path.join(path,r'模型保存地址\svm.model')
     create_svm(dataMat, dataLabel,model_path, decision='ovr')
     et = time.clock()
     print("Training spent {:.4f}s.".format((et - st)))
